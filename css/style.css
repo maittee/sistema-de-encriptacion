@@ -1,0 +1,7 @@
+:root{
+    --tipo-principal:'Roboto Mono', monospace;
+}
+
+body {
+    font-family: var(--tipo-principal);
+}
