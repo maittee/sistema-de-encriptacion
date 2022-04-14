@@ -7,6 +7,7 @@
     <title>Encriptador</title>
     
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js" type="text/javascript" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;0,700;1,300&display=swap" rel="stylesheet">
@@ -18,43 +19,45 @@
         <h1>Encriptador</h1>
     </header>
     
-    <div>
-        <h3>Ingrese el texto aquí:</h2>
-        <textarea name="" id="" cols="40" rows="20"></textarea>
+    <div class="cifrador">
+        <textarea name="" id="" cols="40" rows="20" placeholder="Ingrese el texto"></textarea>
     </div>
     
-    <div>
+    <div class="centrar">
         <button class="boton" id="color-btn">Encriptar</button>
         <button class="boton">Desencriptar</button>
     </div>
     
-    <script>
+    <div class="resultado">
     
-    function encriptar(texto){
-        var nuevoTexto = "";
+    </div>
+    
+    <script>
+        function encriptar(texto){
+            var nuevoTexto = "";
         
-        for(var i = 0; i < texto.length; i++){
-            if (texto.charAt(i) == "a"){
-                nuevoTexto += "ai";
+            for(var i = 0; i < texto.length; i++){
+                if (texto.charAt(i) == "a"){
+                    nuevoTexto += "ai";
+                }
+                else if (texto.charAt(i) == "e"){
+                    nuevoTexto += "enter";
+                }
+                else if (texto.charAt(i) == "i"){
+                    nuevoTexto += "imes";
+                }
+                else if (texto.charAt(i) == "o"){
+                    nuevoTexto += "ober";
+                }
+                else if (texto.charAt(i) == "u"){
+                    nuevoTexto += "ufat";
+                }
+                else {
+                    nuevoTexto += texto.charAt(i);
+                }
             }
-            else if (texto.charAt(i) == "e"){
-                nuevoTexto += "enter";
-            }
-            else if (texto.charAt(i) == "i"){
-                nuevoTexto += "imes";
-            }
-            else if (texto.charAt(i) == "o"){
-                nuevoTexto += "ober";
-            }
-            else if (texto.charAt(i) == "u"){
-                nuevoTexto += "ufat";
-            }
-            else {
-                nuevoTexto += texto.charAt(i);
-            }
+            return nuevoTexto;
         }
-        return nuevoTexto;
-    }
     
     </script>
 </body>

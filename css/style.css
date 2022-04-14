@@ -3,15 +3,30 @@
 
 }
 
-body {
+* {
     font-family: var(--tipo-principal);
+}
+
+body {
     background-color: rgb(216, 227, 231);
+}
+
+.cifrador {
+    display: flex;
+    justify-content: center;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .boton {
     font-family: var(--tipo-principal);
     font-size: 20px;
     padding: 10px;
+    margin: 10px;
 }
 
 #color-btn {
