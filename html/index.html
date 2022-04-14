@@ -18,11 +18,44 @@
         <h1>Encriptador</h1>
     </header>
     
-    <p>Ingrese el texto aquí</p>
+    <div>
+        <h3>Ingrese el texto aquí:</h2>
+        <textarea name="" id="" cols="40" rows="20"></textarea>
+    </div>
     
     <div>
         <button class="boton" id="color-btn">Encriptar</button>
         <button class="boton">Desencriptar</button>
     </div>
+    
+    <script>
+    
+    function encriptar(texto){
+        var nuevoTexto = "";
+        
+        for(var i = 0; i < texto.length; i++){
+            if (texto.charAt(i) == "a"){
+                nuevoTexto += "ai";
+            }
+            else if (texto.charAt(i) == "e"){
+                nuevoTexto += "enter";
+            }
+            else if (texto.charAt(i) == "i"){
+                nuevoTexto += "imes";
+            }
+            else if (texto.charAt(i) == "o"){
+                nuevoTexto += "ober";
+            }
+            else if (texto.charAt(i) == "u"){
+                nuevoTexto += "ufat";
+            }
+            else {
+                nuevoTexto += texto.charAt(i);
+            }
+        }
+        return nuevoTexto;
+    }
+    
+    </script>
 </body>
 </html>
