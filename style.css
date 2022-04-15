@@ -26,12 +26,7 @@ body {
     justify-content: center;
 }
 
-.botones {
-    display: inline-block;
-}
-
 .boton {
-    position: relative;
     font-family: var(--tipo-principal);
     font-size: 20px;
     padding: 10px;
@@ -85,12 +80,7 @@ body {
 }
 
 @media (max-width: 400px) {
-    .cifrador {
+    .botones {
         flex-direction: column;
     }
-    
-    .boton {
-        display: inline-block;
-    }
-    
 }
