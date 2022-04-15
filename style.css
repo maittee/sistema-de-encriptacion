@@ -16,17 +16,30 @@ body {
     justify-content: center;
 }
 
+#text-cifrador {
+    background-color: rgba(117, 172, 16, 0.11);
+    border-radius: 5px;
+}
+
 .centrar {
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.botones {
+    display: inline-block;
 }
 
 .boton {
+    position: relative;
     font-family: var(--tipo-principal);
     font-size: 20px;
     padding: 10px;
     margin: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.596);
+    border-radius: 10px;
+    width: 180px;
+    justify-content: center;
 }
 
 #boton-encriptar {
@@ -34,10 +47,50 @@ body {
     color: white;
 }
 
+#boton-encriptar:hover{
+    background-color: rgb(216, 227, 231);
+    color: rgba(18, 109, 130, 0.562);
+}
+
 #boton-desencriptar {
-    
+    background-color: rgb(18, 110, 130);
+    color: rgb(19, 44, 51);
+}
+
+#boton-desencriptar:hover {
+    background-color: rgb(19, 44, 51);
+    color:rgb(18, 110, 130);
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-resultado {
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 5px;
+    justify-content: center;
 }
 
 #boton-copiar {
+    justify-content: center;
+    display: center;
+}
+
+#boton-copiar:hover {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 400px) {
+    .cifrador {
+        flex-direction: column;
+    }
+    
+    .boton {
+        display: inline-block;
+    }
     
 }
