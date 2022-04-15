@@ -6,17 +6,17 @@ var textAreaCifrador = document.querySelector("#text-cifrador");
 var textAreaResultado = document.querySelector("#text-resultado");
 
 function validarTexto(texto){
-    var filtro = 'abcdefghijklmnñopqrstuvwxyz';
+    var filtro = 'abcdefghijklmnñopqrstuvwxyz ';
         
         for (var i = 0; i < texto.length; i++)
-           if (esMinuscula(filtro, texto, i)) {
+           if (esCaracterValido(filtro, texto, i)) {
                 return false;
            }
             
         return true;
 }
 
-function esMinuscula(texto, letra, i){
+function esCaracterValido(texto, letra, i){
     return texto.indexOf(letra.charAt(i)) == -1;
 }
 
