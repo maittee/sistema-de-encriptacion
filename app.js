@@ -5,27 +5,56 @@ var botonLimpiar = document.querySelector("#boton-limpiar");
 var textAreaCifrador = document.querySelector("#text-cifrador");
 var textAreaResultado = document.querySelector("#text-resultado");
 
+function validarTexto(texto){
+    var filtro = 'abcdefghijklmnñopqrstuvwxyz';
+        
+        for (var i = 0; i < texto.length; i++)
+           if (esMinuscula(filtro, texto, i)) {
+                return false;
+           }
+            
+        return true;
+}
+
+function esMinuscula(texto, letra, i){
+    return texto.indexOf(letra.charAt(i)) == -1;
+}
+
 function encriptar(texto){
     var textoEncriptado = "";
-    textoEncriptado = texto.replace(/e/g, "enter");
-    textoEncriptado = textoEncriptado.replace(/i/g, "imes");
-    textoEncriptado = textoEncriptado.replace(/a/g, "ai");
-    textoEncriptado = textoEncriptado.replace(/o/g, "ober");
-    textoEncriptado = textoEncriptado.replace(/u/g, "ufat");
     
-
+    if(texto.length == 0){
+        alert("No has ingresado nada");
+    }
+    if(validarTexto(texto)) {
+        textoEncriptado = texto.replace(/e/g, "enter");
+        textoEncriptado = textoEncriptado.replace(/i/g, "imes");
+        textoEncriptado = textoEncriptado.replace(/a/g, "ai");
+        textoEncriptado = textoEncriptado.replace(/o/g, "ober");
+        textoEncriptado = textoEncriptado.replace(/u/g, "ufat");
+    } else {
+        alert("Sólo se admiten letras minúsculas y sin acentos");
+    }
     return textoEncriptado;
 }
 
 function desencriptar(texto){
     var textoDesencriptado = "";
     
+    if(texto.length == 0){
+        alert("No has ingresado nada");
+    }
+    if(validarTexto(texto)) {
     textoDesencriptado = texto.replace(/enter/g, "e");
     textoDesencriptado = textoDesencriptado.replace(/imes/g, "i");
     textoDesencriptado = textoDesencriptado.replace(/ai/g, "a");
     textoDesencriptado = textoDesencriptado.replace(/ober/g, "o");
     textoDesencriptado = textoDesencriptado.replace(/ufat/g, "u");
-    
+    }
+    else {
+        alert("Sólo se admiten letras minúsculas y sin acentos");
+    }
+
     return textoDesencriptado;
 }
 
