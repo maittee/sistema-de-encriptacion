@@ -1,49 +1,48 @@
 :root{
     --tipo-principal:'Roboto Mono', monospace;
-
-}
-
-* {
-    font-family: var(--tipo-principal);
+    --blanco: rgb(255, 255, 255);
 }
 
 body {
     background-image: url("cuadricula_distorsionada.png");
+    font-family: var(--tipo-principal);
 }
 
 .titulo {
     background-color: rgba(255, 255, 255, 0.897);
     border-radius: 10px;
-    width: 400px;
+    max-width: 400px;
 }
 
 main {
+    margin-top: 10px;
     backdrop-filter: blur(2px);
     border-radius: 20px;
 }
 
 .parrafo {
    margin: 5px 0px;
-   background-color: white;
+   background-color: var(--blanco);
    border: 1px solid;
-   display: flex;
-   justify-content: center;
    border-radius: 10px;
+}
+
+.text-area {
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.767);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 #text-cifrador {
     background-color: rgba(19, 44, 51, 0.836);
-    border-radius: 5px;
-    resize: none;
-    color: #fff;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.767);
-    margin-bottom: 10px;
-    margin-top: 10px;
+    color: var(--blanco);
 }
 
-
 #text-cifrador::placeholder {
-    color: rgba(255, 255, 255, 0.87);
+    color: var(--blanco);
     font-size: 20px;
 }
 
@@ -60,12 +59,11 @@ main {
     border: 2px solid rgba(0, 0, 0, 0.596);
     border-radius: 10px;
     width: 180px;
-    justify-content: center;
 }
 
 #boton-encriptar {
     background-color: rgba(18, 109, 130, 0.897);
-    color: white;
+    color: var(--blanco);
 }
 
 #boton-encriptar:hover{
@@ -85,12 +83,6 @@ main {
 
 #text-resultado {
     background-color: rgba(255, 255, 255, 0.801);
-    border-radius: 5px;
-    justify-content: center;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.767);
-    resize: none;
-    margin-bottom: 10px;
-    margin-top: 10px;
 }
 
 #text-resultado::placeholder {
@@ -100,16 +92,13 @@ main {
 
 #boton-copiar:hover {
     background-color: black;
-    color: white;
+    color: var(--blanco);
 }
 
 footer {
-   padding: auto;
    margin: 15px;
-   background-color: white;
+   background-color: var(--blanco);
    border: 1px solid;
-   display: flex;
-   justify-content: center;
    border-radius: 10px;
 }
 
@@ -120,6 +109,6 @@ footer {
     }
     
     .boton {
-        width: 100%;
+        max-width: 100%;
     }
 }
