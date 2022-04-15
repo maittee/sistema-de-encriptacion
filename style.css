@@ -41,8 +41,10 @@ main {
     margin-top: 10px;
 }
 
+
 #text-cifrador::placeholder {
     color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
 }
 
 .centrar {
@@ -93,6 +95,7 @@ main {
 
 #text-resultado::placeholder {
     color: rgba(3, 3, 3, 0.897);
+    font-size: 20px;
 }
 
 #boton-copiar:hover {
