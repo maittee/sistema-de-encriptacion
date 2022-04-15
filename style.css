@@ -5,19 +5,20 @@
 
 body {
     background-image: url("cuadricula_distorsionada.png");
-    font-family: var(--tipo-principal);
-}
-
-.titulo {
-    background-color: rgba(255, 255, 255, 0.897);
-    border-radius: 10px;
-    max-width: 400px;
+    font-family: var(--tipo-principal); 
 }
 
 main {
     margin-top: 70px;
     backdrop-filter: blur(2.5px);
     border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: 8px 8px 35px 0px rgba(0, 0, 0, 0.938);
+}
+
+.titulo {
+    background-color: rgba(255, 255, 255, 0.932);
+    border-radius: 10px;
 }
 
 .parrafo {
@@ -96,7 +97,7 @@ main {
 }
 
 footer {
-   margin-top: 15px;
+   margin-top: 40px;
    background-color: var(--blanco);
    border: 1px solid;
    border-radius: 10px;
