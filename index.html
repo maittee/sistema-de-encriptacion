@@ -16,23 +16,24 @@
 
 <body>
     <header>
-        <h1>Encriptador de texto</h1>
+        <h1 class="titulo">Encriptador de texto</h1>
     </header>
     
     <main>
-        <p class="centrar">Sólo se admiten minúsculas</p>
+        <p class="centrar parrafo">Sólo se admiten minúsculas y sin acentos</p>
         
-        <div class="cifrador">
-            <textarea name="" id="text-cifrador" cols="60" rows="20" placeholder="Ingrese el texto" pattern="[a-z]"></textarea>
+        <div class="centrar">
+            <textarea name="cifrador" id="text-cifrador" cols="60" rows="20" placeholder="Ingrese el texto"></textarea>
         </div>
     
         <div class="centrar botones">
             <button class="boton" id="boton-encriptar">Encriptar</button>
             <button class="boton" id="boton-desencriptar">Desencriptar</button>
         </div>
-          
-        <div class="resultado">
-                <textarea id="text-resultado" cols="60" rows="20" placeholder="Resultado" readonly></textarea>
+        
+       
+        <div class="centrar">
+            <textarea id="text-resultado" cols="60" rows="20" placeholder="Resultado" readonly></textarea>
         </div>
         
         <div class="centrar">

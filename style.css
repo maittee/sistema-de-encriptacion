@@ -8,17 +8,41 @@
 }
 
 body {
-    background-color: rgb(216, 227, 231);
+    background-image: url("cuadricula_distorsionada.png");
 }
 
-.cifrador {
-    display: flex;
-    justify-content: center;
+.titulo {
+    background-color: rgba(255, 255, 255, 0.897);
+    border-radius: 10px;
+    width: 400px;
+}
+
+main {
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}
+
+.parrafo {
+   margin: 5px 0px;
+   background-color: white;
+   border: 1px solid;
+   display: flex;
+   justify-content: center;
+   border-radius: 10px;
 }
 
 #text-cifrador {
-    background-color: rgba(117, 172, 16, 0.11);
+    background-color: rgba(19, 44, 51, 0.836);
     border-radius: 5px;
+    resize: none;
+    color: #fff;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.767);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#text-cifrador::placeholder {
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .centrar {
@@ -30,7 +54,7 @@ body {
     font-family: var(--tipo-principal);
     font-size: 20px;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     border: 2px solid rgba(0, 0, 0, 0.596);
     border-radius: 10px;
     width: 180px;
@@ -38,7 +62,7 @@ body {
 }
 
 #boton-encriptar {
-    background-color: rgba(18, 109, 130, 0.562);
+    background-color: rgba(18, 109, 130, 0.897);
     color: white;
 }
 
@@ -48,7 +72,7 @@ body {
 }
 
 #boton-desencriptar {
-    background-color: rgb(18, 110, 130);
+    background-color: rgba(107, 190, 209, 0.829);
     color: rgb(19, 44, 51);
 }
 
@@ -57,21 +81,18 @@ body {
     color:rgb(18, 110, 130);
 }
 
-.resultado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #text-resultado {
     background-color: rgba(255, 255, 255, 0.801);
     border-radius: 5px;
     justify-content: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.767);
+    resize: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-#boton-copiar {
-    justify-content: center;
-    display: center;
+#text-resultado::placeholder {
+    color: rgba(3, 3, 3, 0.897);
 }
 
 #boton-copiar:hover {
@@ -79,8 +100,23 @@ body {
     color: white;
 }
 
+footer {
+   padding: auto;
+   margin: 15px;
+   background-color: white;
+   border: 1px solid;
+   display: flex;
+   justify-content: center;
+   border-radius: 10px;
+}
+
+
 @media (max-width: 400px) {
     .botones {
         flex-direction: column;
+    }
+    
+    .boton {
+        width: 100%;
     }
 }
