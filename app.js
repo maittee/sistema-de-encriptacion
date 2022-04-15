@@ -1,6 +1,7 @@
 var botonEncriptar = document.querySelector("#boton-encriptar");
 var botonDesencriptar = document.querySelector("#boton-desencriptar");
-var botonCopiar = document.querySelector("#boton-copiar")
+var botonCopiar = document.querySelector("#boton-copiar");
+var botonLimpiar = document.querySelector("#boton-limpiar");
 var textAreaCifrador = document.querySelector("#text-cifrador");
 var textAreaResultado = document.querySelector("#text-resultado");
 
@@ -49,4 +50,8 @@ botonDesencriptar.addEventListener("click", function() {
 
 botonCopiar.addEventListener("click", function() {
     copiarTexto();
+});
+
+botonLimpiar.addEventListener("click", function() {
+    textAreaResultado.value = "";
 });

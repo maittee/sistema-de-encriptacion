@@ -4,16 +4,19 @@
 }
 
 body {
-    background-image: url("cuadricula_distorsionada.png");
+    background-image: url("cuadricula_distorsionada_negra.png");
     font-family: var(--tipo-principal); 
 }
 
 main {
     margin-top: 70px;
+    margin-left: 300px;
+    margin-right: 300px;
     backdrop-filter: blur(2.5px);
     border-radius: 20px;
     padding: 10px 30px;
-    box-shadow: 8px 8px 35px 0px rgba(0, 0, 0, 0.938);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.801);
+    
 }
 
 .titulo {
@@ -94,6 +97,17 @@ main {
 #boton-copiar:hover {
     background-color: black;
     color: var(--blanco);
+    border: 2px solid rgba(255, 255, 255, 0.596);
+}
+
+#boton-limpiar {
+    background-color: rgb(136, 136, 136);
+    color: var(--blanco);
+}
+#boton-limpiar:hover {
+    background-color: var(--blanco);
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.596);
 }
 
 footer {
@@ -103,6 +117,19 @@ footer {
    border-radius: 10px;
 }
 
+@media (max-width: 1200px) {
+    main {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 
 @media (max-width: 500px) {
     .botones {
@@ -111,5 +138,10 @@ footer {
     
     .boton {
         width: 100%;
+    }
+    
+    main {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
