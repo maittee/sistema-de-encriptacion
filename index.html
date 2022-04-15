@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
     
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/index.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="text/javascript" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;0,700;1,300&display=swap" rel="stylesheet">
@@ -20,16 +20,19 @@
     </header>
     
     <div class="cifrador">
-        <textarea name="" id="" cols="40" rows="20" placeholder="Ingrese el texto"></textarea>
+        <textarea name="" id="text-cifrador" cols="40" rows="20" placeholder="Ingrese el texto"></textarea>
     </div>
     
     <div class="centrar">
-        <button class="boton" id="color-btn" id="boton-encriptar">Encriptar</button>
+        <button class="boton" id="boton-encriptar">Encriptar</button>
         <button class="boton" id="boton-desencriptar">Desencriptar</button>
     </div>
     
     <div class="resultado">
-    
+        <div>
+            <textarea id="text-resultado" cols="40" rows="20" placeholder="Resultado" readonly></textarea>
+            <button class="boton" id="boton-copiar" type="submit">Copiar</button>
+        </div>
     </div>
     
 </body>

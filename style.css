@@ -29,7 +29,15 @@ body {
     margin: 10px;
 }
 
-#color-btn {
+#boton-encriptar {
     background-color: rgba(18, 109, 130, 0.562);
     color: white;
+}
+
+#boton-desencriptar {
+    
+}
+
+#boton-copiar {
+    
 }
