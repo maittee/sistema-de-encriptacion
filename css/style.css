@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("cuadricula_distorsionada_negra.png");
+    background-image: url("../img/cuadricula_distorsionada_negra.png");
     font-family: var(--tipo-principal); 
 }
 
