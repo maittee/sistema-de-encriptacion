@@ -37,7 +37,7 @@ function copiarTexto(){
     navigator.clipboard.writeText(copiarTexto.value);
 }
 
-function validarTexto(texto){
+function esTextoValido(texto){
     var filtro = 'abcdefghijklmnñopqrstuvwxyz ';
         
     for (var i = 0; i < texto.length; i++) {
@@ -70,9 +70,10 @@ function textoVacioMensaje(){
 botonEncriptar.addEventListener("click", function() {
     var input = textAreaCifrador.value;
     
-    var error = !validarTexto(input);
+    var error = !esTextoValido(input);
     var vacio = esVacio(input);
     
+    console.log(esTextoValido(input));
     if(vacio){
         textoVacioMensaje();
         return;
@@ -94,7 +95,7 @@ botonEncriptar.addEventListener("click", function() {
 botonDesencriptar.addEventListener("click", function() {
     var input = textAreaCifrador.value;
     
-    var error = !validarTexto(input);
+    var error = !esTextoValido(input);
     var vacio = esVacio(input);
     
     if(vacio){
