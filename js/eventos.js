@@ -6,14 +6,12 @@ var textAreaCifrador = document.querySelector("#text-cifrador");
 var textAreaResultado = document.querySelector("#text-resultado");
 
 //eventos botones
-botonEncriptar.addEventListener("click", function(event) {
-    event.preventDefault();
+botonEncriptar.addEventListener("click", function() {
     var input = textAreaCifrador.value;
     
     var error = !esTextoValido(input);
     var vacio = esVacio(input);
     
-    console.log(esTextoValido(input));
     if(vacio){
         textoVacioMensaje();
         return;
@@ -32,7 +30,7 @@ botonEncriptar.addEventListener("click", function(event) {
     
 });
 
-botonDesencriptar.addEventListener("click", function(event) {
+botonDesencriptar.addEventListener("click", function() {
     var input = textAreaCifrador.value;
     
     var error = !esTextoValido(input);
