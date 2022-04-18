@@ -7,6 +7,7 @@ var textAreaResultado = document.querySelector("#text-resultado");
 
 //eventos botones
 botonEncriptar.addEventListener("click", function() {
+ 
     var input = textAreaCifrador.value;
     
     var error = !esTextoValido(input);
