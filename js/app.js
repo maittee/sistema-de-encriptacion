@@ -31,18 +31,8 @@ function copiarTexto(){
 }
 
 function esTextoValido(texto){
-    var filtro = 'abcdefghijklmnñopqrstuvwxyz ';
-        
-    for (var i = 0; i < texto.length; i++) {
-        if (!esCaracterValido(filtro, texto, i)) {
-            return false;
-        }
-    }
-    return true;
-}
-
-function esCaracterValido(texto, letra, i){
-    return texto.indexOf(letra.charAt(i)) != -1;
+    var valido = /^[a-z\s]+$/;
+    return valido.test(texto);
 }
 
 function esVacio(texto){
